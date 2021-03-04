@@ -58,7 +58,7 @@ lazy val core = crossProject(JVMPlatform, JSPlatform)
   .jvmSettings(
     Compile / doc / sources := {
       val old = (Compile / doc / sources).value
-      if (isDotty.value)
+      if (scalaVersion.value.startsWith("3"))
         Seq()
       else
         old
