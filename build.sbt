@@ -33,5 +33,7 @@ lazy val core = crossProject(JVMPlatform, JSPlatform, NativePlatform)
       "org.scalameta" %%% "munit"            % mUnit,
       "org.scalameta" %%% "munit-scalacheck" % mUnit,
       "org.typelevel" %%% "discipline-core"  % discipline
-    )
+    ),
+    scalacOptions -= "-Ykind-projector",
+    scalacOptions += "-Xkind-projector",
   )
