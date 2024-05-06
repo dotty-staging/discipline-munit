@@ -3,6 +3,8 @@ val discipline = "1.5.1"
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
+ThisBuild / tlFatalWarnings := false // disable fatal warnings in CI, as -Ykind-projector is now deprecated
+
 inThisBuild(
   List(
     tlBaseVersion      := "2.0",
